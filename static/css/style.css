@@ -41,6 +41,16 @@ body {
     max-width: 100%;
     border: none;
   }
+  .keypad {
+    /* display: none;  */
+    position: fixed;
+    background: white;
+    height: 50px;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 1px solid #e3e7ee;
+  }
 }
 
 .box {
@@ -239,14 +249,12 @@ textarea-webkit-scrollbar {
   height: 40px;
 }
 
-.keypad {
-  /* display: none;  */
-  position: fixed;
+.keypad{
+  position: relative;
   background: white;
   height: 50px;
-  bottom: 0px;
+  bottom: -11px;
   width: 100%;
-  border-radius: 0px 0px 10px 10px;
   border-top: 1px solid #e3e7ee;
 }
 
