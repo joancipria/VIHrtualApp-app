@@ -28,11 +28,11 @@ function setUserResponse(message) {
  *
  * for more info: `https://rasa.com/docs/rasa/connectors/your-own-website#request-and-response-format`
  */
-function setBotResponse(response) {
+function setBotResponse(response, status) {
     // renders bot response after 500 milliseconds
     setTimeout(() => {
         hideBotTyping();
-        if (response.length < 1) {
+        if (response.length < 1 && status !== "success") {
             // if there is no response from Rasa, send  fallback message to the user
             const fallbackMsg = "Vaya, parece que he tenido un problema 😅! Inténtalo de nuevo más tarde.";
 
@@ -196,7 +196,7 @@ function send(message) {
                 // customActionTrigger();
                 return;
             }
-            setBotResponse(botResponse);
+            setBotResponse(botResponse, status);
         },
         error(xhr, textStatus) {
             if (message.toLowerCase() === "/restart") {
