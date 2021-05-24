@@ -1,1 +1,365 @@
-<svg width="264px" height="280px" viewBox="0 0 264 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created with getavataaars.com</desc><defs><circle id="path-1" cx="120" cy="120" r="120"></circle><path d="M12,160 C12,226.27417 65.72583,280 132,280 C198.27417,280 252,226.27417 252,160 L264,160 L264,-1.42108547e-14 L-3.19744231e-14,-1.42108547e-14 L-3.19744231e-14,160 L12,160 Z" id="path-3"></path><path d="M124,144.610951 L124,163 L128,163 L128,163 C167.764502,163 200,195.235498 200,235 L200,244 L0,244 L0,235 C-4.86974701e-15,195.235498 32.235498,163 72,163 L72,163 L76,163 L76,144.610951 C58.7626345,136.422372 46.3722246,119.687011 44.3051388,99.8812385 C38.4803105,99.0577866 34,94.0521096 34,88 L34,74 C34,68.0540074 38.3245733,63.1180731 44,62.1659169 L44,56 L44,56 C44,25.072054 69.072054,5.68137151e-15 100,0 L100,0 L100,0 C130.927946,-5.68137151e-15 156,25.072054 156,56 L156,62.1659169 C161.675427,63.1180731 166,68.0540074 166,74 L166,88 C166,94.0521096 161.51969,99.0577866 155.694861,99.8812385 C153.627775,119.687011 141.237365,136.422372 124,144.610951 Z" id="path-5"></path></defs><g id="Avataaar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-825.000000, -1100.000000)" id="Avataaar/Circle"><g transform="translate(825.000000, 1100.000000)"><g id="Circle" stroke-width="1" fill-rule="evenodd" transform="translate(12.000000, 40.000000)"><mask id="mask-2" fill="white"><use xlink:href="#path-1"></use></mask><use id="Circle-Background" fill="#E6E6E6" xlink:href="#path-1"></use><g id="Color/Palette/Blue-01" mask="url(#mask-2)" fill="#65C9FF"><rect id="🖍Color" x="0" y="0" width="240" height="240"></rect></g></g><mask id="mask-4" fill="white"><use xlink:href="#path-3"></use></mask><g id="Mask"></g><g id="Avataaar" stroke-width="1" fill-rule="evenodd" mask="url(#mask-4)"><g id="Body" transform="translate(32.000000, 36.000000)"><mask id="mask-6" fill="white"><use xlink:href="#path-5"></use></mask><use fill="#D0C6AC" xlink:href="#path-5"></use><g id="Skin/👶🏽-03-Brown" mask="url(#mask-6)" fill="#EDB98A"><g transform="translate(-32.000000, 0.000000)" id="Color"><rect x="0" y="0" width="264" height="244"></rect></g></g><path d="M156,79 L156,102 C156,132.927946 130.927946,158 100,158 C69.072054,158 44,132.927946 44,102 L44,79 L44,94 C44,124.927946 69.072054,150 100,150 C130.927946,150 156,124.927946 156,94 L156,79 Z" id="Neck-Shadow" fill-opacity="0.100000001" fill="#000000" mask="url(#mask-6)"></path></g><g id="Clothing/Collar-+-Sweater" transform="translate(0.000000, 170.000000)"><defs><path d="M105.192402,29.0517235 L104,29.0517235 L104,29.0517235 C64.235498,29.0517235 32,61.2872215 32,101.051724 L32,110 L232,110 L232,101.051724 C232,61.2872215 199.764502,29.0517235 160,29.0517235 L160,29.0517235 L158.807598,29.0517235 C158.934638,30.0353144 159,31.0364513 159,32.0517235 C159,45.8588423 146.911688,57.0517235 132,57.0517235 C117.088312,57.0517235 105,45.8588423 105,32.0517235 C105,31.0364513 105.065362,30.0353144 105.192402,29.0517235 Z" id="react-path-208"></path></defs><mask id="react-mask-209" fill="white"><use xlink:href="#react-path-208"></use></mask><use id="Clothes" fill="#E6E6E6" fill-rule="evenodd" xlink:href="#react-path-208"></use><g id="Color/Palette/Gray-01" mask="url(#react-mask-209)" fill-rule="evenodd" fill="#E6E6E6"><rect id="🖍Color" x="0" y="0" width="264" height="110"></rect></g><path d="M156,22.2794906 C162.181647,26.8351858 166,33.1057265 166,40.027915 C166,47.2334941 161.862605,53.7329769 155.228997,58.3271669 L149.57933,53.8764929 L145,54.207887 L146,51.0567821 L145.922229,50.995516 C152.022491,47.8530505 156,42.7003578 156,36.8768102 L156,22.2794906 Z M108,21.5714994 C101.232748,26.1740081 97,32.7397769 97,40.027915 C97,47.4261549 101.361602,54.080035 108.308428,58.6915723 L114.42067,53.8764929 L119,54.207887 L118,51.0567821 L118.077771,50.995516 C111.977509,47.8530505 108,42.7003578 108,36.8768102 L108,21.5714994 Z" id="Collar" fill="#F2F2F2" fill-rule="evenodd"></path></g><g id="Face" transform="translate(76.000000, 82.000000)" fill="#000000"><g id="Mouth/Default" transform="translate(2.000000, 52.000000)" fill-opacity="0.699999988"><path d="M40,15 C40,22.7319865 46.2680135,29 54,29 L54,29 C61.7319865,29 68,22.7319865 68,15" id="Mouth"></path></g><g id="Nose/Default" transform="translate(28.000000, 40.000000)" fill-opacity="0.16"><path d="M16,8 C16,12.418278 21.372583,16 28,16 L28,16 C34.627417,16 40,12.418278 40,8" id="Nose"></path></g><g id="Eyes/Default-😀" transform="translate(0.000000, 8.000000)" fill-opacity="0.599999964"><circle id="Eye" cx="30" cy="22" r="6"></circle><circle id="Eye" cx="82" cy="22" r="6"></circle></g><g id="Eyebrow/Outline/Default" fill-opacity="0.599999964"><g id="I-Browse" transform="translate(12.000000, 6.000000)"><path d="M3.63024536,11.1585767 C7.54515501,5.64986673 18.2779197,2.56083721 27.5230268,4.83118046 C28.5957248,5.0946055 29.6788665,4.43856013 29.9422916,3.36586212 C30.2057166,2.2931641 29.5496712,1.21002236 28.4769732,0.94659732 C17.7403633,-1.69001789 5.31209962,1.88699832 0.369754639,8.84142326 C-0.270109626,9.74178291 -0.0589363917,10.9903811 0.84142326,11.6302454 C1.74178291,12.2701096 2.9903811,12.0589364 3.63024536,11.1585767 Z" id="Eyebrow" fill-rule="nonzero"></path><path d="M61.6302454,11.1585767 C65.545155,5.64986673 76.2779197,2.56083721 85.5230268,4.83118046 C86.5957248,5.0946055 87.6788665,4.43856013 87.9422916,3.36586212 C88.2057166,2.2931641 87.5496712,1.21002236 86.4769732,0.94659732 C75.7403633,-1.69001789 63.3120996,1.88699832 58.3697546,8.84142326 C57.7298904,9.74178291 57.9410636,10.9903811 58.8414233,11.6302454 C59.7417829,12.2701096 60.9903811,12.0589364 61.6302454,11.1585767 Z" id="Eyebrow" fill-rule="nonzero" transform="translate(73.000154, 6.039198) scale(-1, 1) translate(-73.000154, -6.039198) "></path></g></g></g><g id="Top" stroke-width="1" fill-rule="evenodd"><defs><rect id="react-path-204" x="0" y="0" width="264" height="280"></rect><path d="M133.506381,81.3351151 C137.363649,83.3307002 140,87.3574737 140,92 L140,105 C140,111.018625 135.569129,116.002364 129.791419,116.867187 C128.048193,137.114792 115.530782,154.282984 98,162.610951 L98,162.610951 L98,181 L102,181 C119.490913,181 135.525121,187.236892 148,197.608051 L148,74 C148,53.5654643 139.717268,35.0654643 126.325902,21.6740982 C112.934536,8.28273213 94.4345357,-3.55271368e-15 74,0 C33.1309285,7.10542736e-15 -7.10542736e-15,33.1309285 0,74 L0,257.716445 C13.5691766,255.775526 24,244.105888 24,230 L24,184.423101 C30.9346808,182.200199 38.3271796,181 46,181 L50,181 L50,162.610951 C38.7726252,157.277407 29.6015372,148.317951 24,137.245847 L24,75.2659587 C33.1467898,72.2910056 42.777598,68.0170651 52.3415164,62.4953343 C67.7445474,53.6023901 80.4313947,42.9409152 89.0661426,32.3970356 C90.8310687,37.5951441 93.1752556,42.8009742 96.1104311,47.8848473 C104.877881,63.0705152 117.224186,74.2337047 130,79.9170491 L130,80.1659169 C130.400422,80.233095 130.794121,80.3201038 131.18005,80.4258987 C131.954509,80.7493055 132.730185,81.0524853 133.506381,81.3351151 Z" id="react-path-205"></path></defs><mask id="react-mask-202" fill="white"><use xlink:href="#react-path-204"></use></mask><g id="Mask"></g><g id="Top/Long-Hair/Straight" mask="url(#react-mask-202)"><g transform="translate(-1.000000, 0.000000)"><g id="Hair" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(59.000000, 18.000000)"><mask id="react-mask-203" fill="white"><use xlink:href="#react-path-205"></use></mask><use id="Mask-Hair" fill="#944F23" xlink:href="#react-path-205"></use><g id="Skin/👶🏽-03-Brown" mask="url(#react-mask-203)" fill="#724133"><g transform="translate(0.000000, 0.000000) " id="Color"><rect x="0" y="0" width="264" height="280"></rect></g></g></g><path d="M192.506381,99.3351151 C197.3745,101.107702 202.263079,102.071957 207,102.148232 L207,102.148232 L207,92 C207,71.5654643 198.717268,53.0654643 185.325902,39.6740982 C198.717268,53.0654643 207,71.5654643 207,92 L207,215.608051 C194.525121,205.236892 178.490913,199 161,199 L157,199 L157,180.610951 L157,180.610951 C174.530782,172.282984 187.048193,155.114792 188.791419,134.867187 C194.569129,134.002364 199,129.018625 199,123 L199,110 C199,105.357474 196.363649,101.3307 192.506381,99.3351151 Z M190.18005,98.4258987 C189.794121,98.3201038 189.400422,98.233095 189,98.1659169 L189,97.9170491 C189.392974,98.0918644 189.786355,98.2614951 190.18005,98.4258987 Z M83,155.245847 C88.6015372,166.317951 97.7726252,175.277407 109,180.610951 L109,199 L105,199 C97.3271796,199 89.9346808,200.200199 83,202.423101 L83,155.245847 Z" id="Shadow" fill-opacity="0.24" fill="#000000" fill-rule="evenodd"></path></g></g></g></g></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="264"
+   height="262"
+   viewBox="0 0 264 262"
+   version="1.1"
+   id="svg88"
+   sodipodi:docname="irene_circle.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata92">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     id="namedview90"
+     showgrid="false"
+     inkscape:zoom="2.5535714"
+     inkscape:cx="132"
+     inkscape:cy="140"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg88" />
+  <desc
+     id="desc2">Created with getavataaars.com</desc>
+  <defs
+     id="defs7">
+    <circle
+       id="path-1"
+       cx="120"
+       cy="120"
+       r="120" />
+    <path
+       d="m 12,160 c 0,66.27417 53.72583,120 120,120 66.27417,0 120,-53.72583 120,-120 h 12 V 0 H 0 v 160 z"
+       id="path-3" />
+    <path
+       d="M 124,144.61095 V 163 h 4 v 0 c 39.7645,0 72,32.2355 72,72 v 9 H 0 v -9 c 0,-39.7645 32.235498,-72 72,-72 v 0 h 4 V 144.61095 C 58.762634,136.42237 46.372225,119.68701 44.305139,99.881238 38.480311,99.057787 34,94.05211 34,88 V 74 C 34,68.054007 38.324573,63.118073 44,62.165917 V 56 56 C 44,25.072054 69.072054,0 100,0 v 0 0 c 30.92795,0 56,25.072054 56,56 v 6.165917 c 5.67543,0.952156 10,5.88809 10,11.834083 v 14 c 0,6.05211 -4.48031,11.057787 -10.30514,11.881238 C 153.62778,119.68701 141.23736,136.42237 124,144.61095 Z"
+       id="path-5" />
+  </defs>
+  <g
+     id="g86"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="translate(0,-18)">
+    <g
+       transform="translate(-825,-1100)"
+       id="Avataaar/Circle">
+      <g
+         transform="translate(825,1100)"
+         id="g83">
+        <g
+           id="Circle"
+           stroke-width="1"
+           fill-rule="evenodd"
+           transform="translate(12,40)">
+          <mask
+             id="mask-2"
+             fill="#ffffff">
+            <use
+               xlink:href="#path-1"
+               id="use9"
+               x="0"
+               y="0"
+               width="100%"
+               height="100%" />
+          </mask>
+          <use
+             id="Circle-Background"
+             fill="#e6e6e6"
+             xlink:href="#path-1"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+          <g
+             id="Color/Palette/Blue-01"
+             mask="url(#mask-2)"
+             fill="#65c9ff">
+            <rect
+               id="🖍Color"
+               x="0"
+               y="0"
+               width="240"
+               height="240" />
+          </g>
+        </g>
+        <mask
+           id="mask-4"
+           fill="#ffffff">
+          <use
+             xlink:href="#path-3"
+             id="use16"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </mask>
+        <g
+           id="Mask" />
+        <g
+           id="Avataaar"
+           stroke-width="1"
+           fill-rule="evenodd"
+           mask="url(#mask-4)">
+          <g
+             id="Body"
+             transform="translate(32,36)">
+            <mask
+               id="mask-6"
+               fill="#ffffff">
+              <use
+                 xlink:href="#path-5"
+                 id="use20"
+                 x="0"
+                 y="0"
+                 width="100%"
+                 height="100%" />
+            </mask>
+            <use
+               fill="#d0c6ac"
+               xlink:href="#path-5"
+               id="use23"
+               x="0"
+               y="0"
+               width="100%"
+               height="100%" />
+            <g
+               id="Skin/👶🏽-03-Brown"
+               mask="url(#mask-6)"
+               fill="#edb98a">
+              <g
+                 transform="translate(-32)"
+                 id="Color">
+                <rect
+                   x="0"
+                   y="0"
+                   width="264"
+                   height="244"
+                   id="rect25" />
+              </g>
+            </g>
+            <path
+               d="m 156,79 v 23 c 0,30.92795 -25.07205,56 -56,56 -30.927946,0 -56,-25.07205 -56,-56 V 79 94 c 0,30.92795 25.072054,56 56,56 30.92795,0 56,-25.07205 56,-56 z"
+               id="Neck-Shadow"
+               fill-opacity="0.1"
+               fill="#000000"
+               mask="url(#mask-6)" />
+          </g>
+          <g
+             id="Clothing/Collar-+-Sweater"
+             transform="translate(0,170)">
+            <defs
+               id="defs32">
+              <path
+                 d="M 105.1924,29.051724 H 104 v 0 c -39.764502,0 -72,32.235497 -72,71.999996 V 110 h 200 v -8.94828 C 232,61.287221 199.7645,29.051724 160,29.051724 v 0 h -1.1924 c 0.12704,0.98359 0.1924,1.984727 0.1924,3 0,13.807118 -12.08831,25 -27,25 -14.91169,0 -27,-11.192882 -27,-25 0,-1.015273 0.0654,-2.01641 0.1924,-3 z"
+                 id="react-path-208" />
+            </defs>
+            <mask
+               id="react-mask-209"
+               fill="#ffffff">
+              <use
+                 xlink:href="#react-path-208"
+                 id="use34"
+                 x="0"
+                 y="0"
+                 width="100%"
+                 height="100%" />
+            </mask>
+            <use
+               id="Clothes"
+               fill="#e6e6e6"
+               fill-rule="evenodd"
+               xlink:href="#react-path-208"
+               x="0"
+               y="0"
+               width="100%"
+               height="100%" />
+            <g
+               id="Color/Palette/Gray-01"
+               mask="url(#react-mask-209)"
+               fill-rule="evenodd"
+               fill="#e6e6e6">
+              <rect
+                 id="rect38"
+                 x="0"
+                 y="0"
+                 width="264"
+                 height="110" />
+            </g>
+            <path
+               d="m 156,22.279491 c 6.18165,4.555695 10,10.826236 10,17.748424 0,7.205579 -4.1374,13.705062 -10.771,18.299252 L 149.57933,53.876493 145,54.207887 l 1,-3.151105 -0.0778,-0.06127 C 152.02249,47.853051 156,42.700358 156,36.87681 Z m -48,-0.707992 c -6.76725,4.602509 -11,11.168278 -11,18.456416 0,7.39824 4.3616,14.05212 11.30843,18.663657 l 6.11224,-4.815079 4.57933,0.331394 -1,-3.151105 0.0778,-0.06127 C 111.97751,47.853051 108,42.700358 108,36.87681 Z"
+               id="Collar"
+               fill="#f2f2f2"
+               fill-rule="evenodd" />
+          </g>
+          <g
+             id="Face"
+             transform="translate(76,82)"
+             fill="#000000">
+            <g
+               id="Mouth/Default"
+               transform="translate(2,52)"
+               fill-opacity="0.7">
+              <path
+                 d="m 40,15 c 0,7.731987 6.268014,14 14,14 v 0 c 7.731986,0 14,-6.268013 14,-14"
+                 id="Mouth" />
+            </g>
+            <g
+               id="Nose/Default"
+               transform="translate(28,40)"
+               fill-opacity="0.16">
+              <path
+                 d="m 16,8 c 0,4.418278 5.372583,8 12,8 v 0 c 6.627417,0 12,-3.581722 12,-8"
+                 id="Nose" />
+            </g>
+            <g
+               id="Eyes/Default-😀"
+               transform="translate(0,8)"
+               fill-opacity="0.6">
+              <circle
+                 id="Eye"
+                 cx="30"
+                 cy="22"
+                 r="6" />
+              <circle
+                 id="circle48"
+                 cx="82"
+                 cy="22"
+                 r="6" />
+            </g>
+            <g
+               id="Eyebrow/Outline/Default"
+               fill-opacity="0.6">
+              <g
+                 id="I-Browse"
+                 transform="translate(12,6)">
+                <path
+                   d="M 3.6302454,11.158577 C 7.545155,5.6498667 18.27792,2.5608372 27.523027,4.8311805 28.595725,5.0946055 29.678867,4.4385601 29.942292,3.3658621 30.205717,2.2931641 29.549671,1.2100224 28.476973,0.94659732 17.740363,-1.6900179 5.3120996,1.8869983 0.36975464,8.8414233 -0.27010963,9.7417829 -0.05893639,10.990381 0.84142326,11.630245 1.7417829,12.27011 2.9903811,12.058936 3.6302454,11.158577 Z"
+                   id="Eyebrow"
+                   fill-rule="nonzero" />
+                <path
+                   d="M 61.630245,11.158577 C 65.545155,5.6498667 76.27792,2.5608372 85.523027,4.8311805 86.595725,5.0946055 87.678866,4.4385601 87.942292,3.3658621 88.205717,2.2931641 87.549671,1.2100224 86.476973,0.94659732 75.740363,-1.6900179 63.3121,1.8869983 58.369755,8.8414233 c -0.639865,0.9003596 -0.428691,2.1489577 0.471668,2.7888217 0.90036,0.639865 2.148958,0.428691 2.788822,-0.471668 z"
+                   id="path52"
+                   fill-rule="nonzero"
+                   transform="matrix(-1,0,0,1,146.00031,0)" />
+              </g>
+            </g>
+          </g>
+          <g
+             id="Top"
+             stroke-width="1"
+             fill-rule="evenodd">
+            <defs
+               id="defs59">
+              <rect
+                 id="react-path-204"
+                 x="0"
+                 y="0"
+                 width="264"
+                 height="280" />
+              <path
+                 d="M 133.50638,81.335115 C 137.36365,83.3307 140,87.357474 140,92 v 13 c 0,6.01863 -4.43087,11.00236 -10.20858,11.86719 -1.74323,20.2476 -14.26064,37.41579 -31.79142,45.74376 v 0 V 181 h 4 c 17.49091,0 33.52512,6.23689 46,16.60805 V 74 C 148,53.565464 139.71727,35.065464 126.3259,21.674098 112.93454,8.2827321 94.434536,0 74,0 33.130929,0 0,33.130929 0,74 V 257.71645 C 13.569177,255.77553 24,244.10589 24,230 V 184.4231 C 30.934681,182.2002 38.32718,181 46,181 h 4 v -18.38905 c -11.227375,-5.33354 -20.398463,-14.293 -26,-25.3651 V 75.265959 C 33.14679,72.291006 42.777598,68.017065 52.341516,62.495334 67.744547,53.60239 80.431395,42.940915 89.066143,32.397036 90.831069,37.595144 93.175256,42.800974 96.110431,47.884847 104.87788,63.070515 117.22419,74.233705 130,79.917049 v 0.248868 c 0.40042,0.06718 0.79412,0.154187 1.18005,0.259982 0.77446,0.323407 1.55013,0.626586 2.32633,0.909216 z"
+                 id="react-path-205" />
+            </defs>
+            <mask
+               id="react-mask-202"
+               fill="#ffffff">
+              <use
+                 xlink:href="#react-path-204"
+                 id="use61"
+                 x="0"
+                 y="0"
+                 width="100%"
+                 height="100%" />
+            </mask>
+            <g
+               id="g64" />
+            <g
+               id="Top/Long-Hair/Straight"
+               mask="url(#react-mask-202)">
+              <g
+                 transform="translate(-1)"
+                 id="g78">
+                <g
+                   id="Hair"
+                   stroke-width="1"
+                   fill="none"
+                   fill-rule="evenodd"
+                   transform="translate(59,18)">
+                  <mask
+                     id="react-mask-203"
+                     fill="#ffffff">
+                    <use
+                       xlink:href="#react-path-205"
+                       id="use66"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </mask>
+                  <use
+                     id="Mask-Hair"
+                     fill="#944f23"
+                     xlink:href="#react-path-205"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <g
+                     id="g74"
+                     mask="url(#react-mask-203)"
+                     fill="#724133">
+                    <g
+                       id="g72">
+                      <rect
+                         x="0"
+                         y="0"
+                         width="264"
+                         height="280"
+                         id="rect70" />
+                    </g>
+                  </g>
+                </g>
+                <path
+                   d="m 192.50638,99.335115 c 4.86812,1.772585 9.7567,2.736845 14.49362,2.813115 v 0 V 92 C 207,71.565464 198.71727,53.065464 185.3259,39.674098 198.71727,53.065464 207,71.565464 207,92 V 215.60805 C 194.52512,205.23689 178.49091,199 161,199 h -4 v -18.38905 0 c 17.53078,-8.32797 30.04819,-25.49616 31.79142,-45.74376 C 194.56913,134.00236 199,129.01862 199,123 v -13 c 0,-4.64253 -2.63635,-8.6693 -6.49362,-10.664885 z m -2.32633,-0.909216 C 189.79412,98.320104 189.40042,98.233095 189,98.165917 v -0.248868 c 0.39297,0.174815 0.78635,0.344446 1.18005,0.50885 z M 83,155.24585 c 5.601537,11.0721 14.772625,20.03156 26,25.3651 V 199 h -4 c -7.67282,0 -15.065319,1.2002 -22,3.4231 z"
+                   id="Shadow"
+                   fill-opacity="0.24"
+                   fill="#000000"
+                   fill-rule="evenodd" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

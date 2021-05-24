@@ -1,5 +1,22 @@
+@font-face {
+  font-family: AsapBold;
+  src: url("../fonts/Asap-Bold.ttf");
+}
+@font-face {
+  font-family: AsapRegular;
+  src: url("../fonts/Asap-Regular.ttf");
+}
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand_Bold.otf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "AsapRegular","Lato", sans-serif;
   background-size: cover;
   width: 100%;
   padding: 0;
@@ -48,8 +65,10 @@ body {
     height: 50px;
     bottom: 0px;
     width: 100%;
-    border-radius: 0px 0px 10px 10px;
     border-top: 1px solid #e3e7ee;
+  }
+  .chats{
+    height: 85%;
   }
 }
 
@@ -131,6 +150,7 @@ body {
 .chat_header img {
   height: 50px;
   float: left;
+  margin-left: 10px;
 }
 
 .chat_header_title {
@@ -190,7 +210,7 @@ div.chats::-webkit-scrollbar {
   border-radius: 1.5em;
   max-width: 60%;
   min-width: 25%;
-  font-size: 13px;
+  font-size: 14px;
   word-wrap: break-word;
   border-radius: 10px 10px 10px 0px;
 }
@@ -200,11 +220,11 @@ textarea {
   resize: none;
   outline: none;
   overflow: hidden;
-  font-family: Lato;
+  font-family: "AsapRegular";
 }
 
 textarea::-webkit-input-placeholder {
-  font-family: Lato;
+  font-family: "AsapRegular";
 }
 
 textarea-webkit-scrollbar {
@@ -301,8 +321,8 @@ textarea-webkit-scrollbar {
   color: #037aff;
   margin-right: 5px;
   float: right;
-  margin-top: -4%;
-  display: none;
+  margin-top: -24px;
+  margin-right: 10px;
 }
 
 .dropdown-content li > a,
@@ -517,7 +537,7 @@ div.content_data::-webkit-scrollbar {
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
   background: transparent;
   color: #037aff;
   text-align: center;
@@ -530,6 +550,11 @@ div.content_data::-webkit-scrollbar {
   border: 2px solid #037aff;
   font-weight: bold;
   width: 48%;
+}
+
+.menuChips:hover {
+  background: #037aff;
+  color: white;
 }
 
 /* cards carousels */
