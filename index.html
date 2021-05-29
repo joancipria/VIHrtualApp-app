@@ -16,10 +16,10 @@
 <body>
   <div class="main-container">
     <div class="left-container">
-     <!-- <div class="box sb3">Formo parte de Vihrtual-App, un proyecto de investigación de la Univeristat Politècnica de
+      <!-- <div class="box sb3">Formo parte de Vihrtual-App, un proyecto de investigación de la Univeristat Politècnica de
         València y el Hospital de Elche. Puedes realizarme cualquier consulta o duda que tengas sobre el VIH y yo
         trataré de responderte lo mejor posible.</div>-->
-      <img class="big-avatar" src="static/img/avatars/salva_big.svg" alt="">
+      <img id="big-avatar" draggable="false" class="big-avatar" src="" alt="">
 
     </div>
     <div class="right-container">
@@ -30,16 +30,16 @@
       </div>
 
       <!--chatbot widget -->
-      <div class="widget">
+      <div id="chat" class="widget">
         <div class="chat_header">
           <!--Add the name of the bot here -->
-          <img src="static/img/avatars/salva_circle.svg" alt="">
+          <img id="avatar" src="static/img/avatars/salva_circle.svg" alt="" draggable="false">
           <div>
-            <span class="chat_header_title">Juan</span><br>
+            <span id="name" class="chat_header_title">Juan</span><br>
             <span id="bot_status" class="chat_header_status">en línea</span>
           </div>
-          <span class="dropdown-trigger" href="#" data-target="dropdown1">
-            <img class="icon" src="static/img/icons/question.svg">
+          <span onclick="showInfo()" class="dropdown-trigger" href="#" data-target="dropdown1">
+            <img draggable="false" class="icon" src="static/img/icons/question.svg">
           </span>
 
           <!-- Dropdown menu
@@ -59,11 +59,37 @@
         <div class="keypad">
           <textarea id="userInput" placeholder="Escribe tu pregunta aquí" class="usrInput"></textarea>
           <div id="sendButton">
-            <img class="icon" src="static/img/icons/send.svg" alt="">
+            <img draggable="false" class="icon" src="static/img/icons/send.svg" alt="">
           </div>
         </div>
       </div>
-
+      <div id="info" class="screen" hidden="true">
+        Information
+      </div>
+    </div>
+    <div id="avatar-selection" class="screen">
+      <p class="select-avatar-message">Elije un asistente</p>
+      <div class="buttons">
+        <div id="female-avatar" style="opacity: 0.4;">
+          <img draggable="false" onclick="selectAvatar(avatars.female)" src="static/img/avatars/irene_circle.svg"
+            alt="">
+          <p>Irene</p>
+        </div>
+        <div class="spacer"></div>
+        <div id="male-avatar">
+          <img draggable="false" onclick="selectAvatar(avatars.male)" src="static/img/avatars/salva_circle.svg" alt="">
+          <p>Salva</p>
+        </div>
+      </div>
+      <a href="#" class="button" onclick="start()">Empezar</a>
+      <div class="privacy-alert">
+        <p>
+          VIHrtual-App es un proyecto de investigación de la Universitat Politècnica de València, la Fundación FISABIO y
+          la Unidad de Enfermedades Infecciosas del Hospital General de Elche para la prevención del VIH. Los datos
+          compartidos están sujetos a la RGPD, son anónimos y tienen como único fin la investigación. En 'Empezar'
+          aceptas tu participación voluntaria.
+        </p>
+      </div>
     </div>
   </div>
   <!--JavaScript at end of body for optimized loading-->
@@ -75,6 +101,61 @@
 
   <!--Chart.js Script -->
   <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+  <script>
+    // App screens
+    let screens = {
+      chat: document.getElementById("chat"),
+      avatar: document.getElementById("avatar-selection"),
+      info: document.getElementById("info"),
+    }
+
+    // Avatars
+    let avatars = {
+      active: null,
+      male: {
+        html: document.getElementById("male-avatar"),
+        name: "Salva",
+        img: "static/img/avatars/salva_circle.svg",
+        bigImg: "static/img/avatars/salva_big.svg",
+
+      },
+      female: {
+        html: document.getElementById("female-avatar"),
+        name: "Irene",
+        img: "static/img/avatars/irene_circle.svg",
+        bigImg: "static/img/avatars/irene_big.svg",
+      }
+    }
+    avatars.active = avatars.male;
+
+    // Start chat
+    function start() {
+      document.getElementById("avatar").src = avatars.active.img;
+      document.getElementById("name").innerHTML = avatars.active.name;
+      document.getElementById("big-avatar").src = avatars.active.bigImg;
+
+      screens.avatar.hidden = true;
+    }
+
+    function showInfo() {
+      screens.info.hidden = false;
+    }
+
+    function showChat() {
+      screens.info.hidden = true;
+    }
+
+    // Selects avatar
+    function selectAvatar(avatar) {
+      // Both to 50% opacity
+      avatars.male.html.style.opacity = "0.4";
+      avatars.female.html.style.opacity = "0.4";
+
+      // Current to 100% opacity
+      avatar.html.style.opacity = "1";
+      avatars.active = avatar;
+    }
+  </script>
 </body>
 
 </html>
