@@ -31,14 +31,14 @@
 
       <!--chatbot widget -->
       <div id="chat" class="widget">
-        <div class="chat_header">
+        <div class="header">
           <!--Add the name of the bot here -->
           <img id="avatar" src="static/img/avatars/salva_circle.svg" alt="" draggable="false">
           <div>
             <span id="name" class="chat_header_title">Juan</span><br>
             <span id="bot_status" class="chat_header_status">en línea</span>
           </div>
-          <span onclick="showInfo()" class="dropdown-trigger" href="#" data-target="dropdown1">
+          <span onclick="showWiki()" class="dropdown-trigger" href="#" data-target="dropdown1">
             <img draggable="false" class="icon" src="static/img/icons/question.svg">
           </span>
 
@@ -63,8 +63,30 @@
           </div>
         </div>
       </div>
-      <div id="info" class="screen" hidden="true">
-        Information
+      <div id="wiki" class="screen" hidden="true">
+        <div class="header">
+          <!--Add the name of the bot here -->
+          <img onclick="showChat()" class="icon" src="static/img/icons/back.svg" alt="" draggable="false">
+          <p class="header_title">Información</p>
+        </div>
+        <div class="wiki-content">
+          <p class="wiki-title">Virus de la inmunodeficiencia humana</p>
+          <p>El <b>virus de la inmunodeficiencia humana (VIH)</b> es un lentivirus que causa la infección por VIH.​ Se trata de
+            un virus que, en promedio, en 10 años en países desarrollados o en cinco años en países con deficiente salud
+            pública, provoca el desarrollo del síndrome de inmunodeficiencia adquirida (SIDA).​ </p>
+          <details>
+            <summary>Origen</summary>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, dolorum ex minima voluptatum rerum neque
+              alias eos enim ratione fuga doloremque numquam a ipsa tempora, cupiditate reiciendis, dolores rem! Quidem?
+            </p>
+          </details>
+          <details>
+            <summary>Transmisión</summary>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, dolorum ex minima voluptatum rerum neque
+              alias eos enim ratione fuga doloremque numquam a ipsa tempora, cupiditate reiciendis, dolores rem! Quidem?
+            </p>
+          </details>
+        </div>
       </div>
     </div>
     <div id="avatar-selection" class="screen">
@@ -106,7 +128,7 @@
     let screens = {
       chat: document.getElementById("chat"),
       avatar: document.getElementById("avatar-selection"),
-      info: document.getElementById("info"),
+      wiki: document.getElementById("wiki"),
     }
 
     // Avatars
@@ -137,12 +159,12 @@
       screens.avatar.hidden = true;
     }
 
-    function showInfo() {
-      screens.info.hidden = false;
+    function showWiki() {
+      screens.wiki.hidden = false;
     }
 
     function showChat() {
-      screens.info.hidden = true;
+      screens.wiki.hidden = true;
     }
 
     // Selects avatar

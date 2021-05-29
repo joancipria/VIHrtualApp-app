@@ -70,7 +70,6 @@ body {
   flex-direction: column;
   position: absolute;
   height: 100%;
-  width: 100%;
   background-color: white;
 }
 #avatar-selection {
@@ -90,6 +89,7 @@ body {
 #avatar-selection .buttons p {
   text-align: center;
   font-family: "Quicksand";
+  color: #35424a;
 }
 
 #avatar-selection img {
@@ -117,6 +117,22 @@ body {
 .select-avatar-message {
   font-family: "Quicksand";
   font-size: 20px;
+  color: #35424a;
+}
+
+.wiki-title{
+  font-family: "Quicksand";
+  font-size: 26px;
+  color: #35424a;
+}
+
+.wiki-content{
+  padding: 20px;
+}
+
+summary {
+  border-bottom: 2px solid #EAECF0;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -161,6 +177,7 @@ body {
 
 .icon {
   width: 30px;
+  cursor: pointer;
 }
 
 *,
@@ -197,13 +214,13 @@ body {
   background-color: #e3f2fd;
 }
 
-.chat_header {
+.header {
   background: #ffffff;
   padding: 5px;
   font-size: 20px;
 }
 
-.chat_header img {
+.header img {
   height: 50px;
   float: left;
   margin-left: 10px;
