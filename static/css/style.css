@@ -371,9 +371,9 @@ div.chats::-webkit-scrollbar {
 }
 
 .time {
+  font-family: 'Helvetica', 'Arial';
   color: var(--time-color);
   font-size: 12px;
-  font-weight: bold;
   float: right;
   margin-top: 6px;
   margin-left: 10px;
