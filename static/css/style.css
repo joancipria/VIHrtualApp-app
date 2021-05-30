@@ -11,6 +11,7 @@
   --header-title-color: #000000;
   --search-background-color: #eef0f2;
   --search-color: #989eb1;
+  --time-color: #999999;
 }
 
 @font-face {
@@ -367,6 +368,15 @@ div.chats::-webkit-scrollbar {
   font-size: 14px;
   word-wrap: break-word;
   border-radius: 10px 10px 10px 0px;
+}
+
+.time {
+  color: var(--time-color);
+  font-size: 12px;
+  font-weight: bold;
+  float: right;
+  margin-top: 6px;
+  margin-left: 10px;
 }
 
 textarea {

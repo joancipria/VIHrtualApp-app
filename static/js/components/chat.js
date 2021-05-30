@@ -12,8 +12,10 @@ function scrollToBottomOfResults() {
  * @param {String} message user message
  */
 function setUserResponse(message) {
+    let date = new Date();
+    let dateString = date.getHours()+":"+date.getMinutes();
     //const user_response = `<img class="userAvatar" src='./static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
-    const user_response = `<p class="userMsg">${message} </p><div class="clearfix"></div>`;
+    const user_response = `<p class="userMsg">${message} <span class="time">${dateString}</span></p><div class="clearfix"></div>`;
     $(user_response).appendTo(".chats").show("slow");
 
     $(".usrInput").val("");
@@ -29,6 +31,8 @@ function setUserResponse(message) {
  * for more info: `https://rasa.com/docs/rasa/connectors/your-own-website#request-and-response-format`
  */
 function setBotResponse(response, status) {
+    let date = new Date();
+    let dateString = date.getHours()+":"+date.getMinutes();
     // renders bot response after 500 milliseconds
     setTimeout(() => {
         hideBotTyping();
@@ -37,7 +41,7 @@ function setBotResponse(response, status) {
             const fallbackMsg = "Vaya, parece que he tenido un problema 😅! Inténtalo de nuevo más tarde.";
 
             //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
-            const BotResponse = `<p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
+            const BotResponse = `<p class="botMsg">${fallbackMsg}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
 
             $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
             scrollToBottomOfResults();
