@@ -406,7 +406,7 @@ textarea-webkit-scrollbar {
   padding: 10px;
   float: right;
   margin-right: 0.5em;
-  background: var(--user-message-background-colo);
+  background: var(--user-message-background-color);
   color: var(--text-message-color);
   margin-bottom: 0.15em;
   font-size: 13px;
