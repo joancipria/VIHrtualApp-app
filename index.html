@@ -29,25 +29,18 @@
         <canvas id="modal-chart"></canvas>
       </div>
 
-      <!--chatbot widget -->
       <div id="chat" class="widget">
         <div class="header">
-          <!--Add the name of the bot here -->
-          <img id="avatar" src="static/img/avatars/salva_circle.svg" alt="" draggable="false">
-          <div>
+          <div class="action-left">
+            <img id="avatar" src="static/img/avatars/salva_circle.svg" alt="" draggable="false">
+          </div>
+          <div class="header_title">
             <span id="name" class="chat_header_title">Juan</span><br>
             <span id="bot_status" class="chat_header_status">en línea</span>
           </div>
-          <span onclick="showWiki()" class="dropdown-trigger" href="#" data-target="dropdown1">
-            <img draggable="false" class="icon" src="static/img/icons/question.svg">
-          </span>
-
-          <!-- Dropdown menu
-          <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#" id="clear">Clear</a></li>
-            <li><a href="#" id="restart">Restart</a></li>
-            <li><a href="#" id="close">Close</a></li>
-          </ul>-->
+          <div class="action-right">
+            <img onclick="showWiki()" draggable="false" class="icon" src="static/img/icons/question.svg">
+          </div>
         </div>
 
         <!--Chatbot contents goes here -->
@@ -65,13 +58,19 @@
       </div>
       <div id="wiki" class="screen" hidden="true">
         <div class="header">
-          <!--Add the name of the bot here -->
-          <img onclick="showChat()" class="icon" src="static/img/icons/back.svg" alt="" draggable="false">
+          <div class="action-left">
+            <img onclick="showChat()" class="icon" src="static/img/icons/back.svg" alt="" draggable="false">
+          </div>
           <p class="header_title">Información</p>
+          <div class="action-right">
+
+          </div>
         </div>
         <div class="wiki-content">
+          <input class="search" type="text" placeholder="Búscar información">
           <p class="wiki-title">Virus de la inmunodeficiencia humana</p>
-          <p>El <b>virus de la inmunodeficiencia humana (VIH)</b> es un lentivirus que causa la infección por VIH.​ Se trata de
+          <p>El <b>virus de la inmunodeficiencia humana (VIH)</b> es un lentivirus que causa la infección por VIH.​ Se
+            trata de
             un virus que, en promedio, en 10 años en países desarrollados o en cinco años en países con deficiente salud
             pública, provoca el desarrollo del síndrome de inmunodeficiencia adquirida (SIDA).​ </p>
           <details>
