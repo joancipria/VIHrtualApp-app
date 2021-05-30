@@ -12,6 +12,9 @@
   --search-background-color: #eef0f2;
   --search-color: #989eb1;
   --time-color: #999999;
+  --bot-message-background-color: #ffffff;
+  --user-message-background-color: #effdde;
+  --text-message-color: #0f0f0f;
 }
 
 @font-face {
@@ -357,8 +360,8 @@ div.chats::-webkit-scrollbar {
 .botMsg {
   float: left;
   margin-top: 5px;
-  background: #ffffff;
-  color: #0f0f0f;
+  background: var(--bot-message-background-color);
+  color: var(--text-message-color);
   /* box-shadow: 2px 3px 9px 0px #9a82842e; */
   margin-left: 0.5em;
   padding: 10px;
@@ -403,8 +406,8 @@ textarea-webkit-scrollbar {
   padding: 10px;
   float: right;
   margin-right: 0.5em;
-  background: #effdde;
-  color: #0f0f0f;
+  background: var(--user-message-background-colo);
+  color: var(--text-message-color);
   margin-bottom: 0.15em;
   font-size: 13px;
   max-width: 65%;
