@@ -1,4 +1,10 @@
 /* ============= General CSS =============== */
+:root {
+  --primary-color: #037aff;
+  --secondary-color: #3292ff;
+  --spacer-color: #c8c7cc;
+  --title-color: #35424a;
+}
 
 @font-face {
   font-family: AsapBold;
@@ -88,7 +94,7 @@ body {
   max-width: 50%;
   flex-wrap: wrap;
   align-items: flex-start;
-  border-left: 1px solid #c8c7cc;
+  border-left: 1px solid var(--spacer-color);
 }
 
 @media only screen and (max-width: 1100px) {
@@ -114,7 +120,7 @@ body {
 /* ============= Avatar selection CSS =============== */
 
 .button {
-  background-color: #037aff;
+  background-color: var(--primary-color);
   border-radius: 6px;
   color: white;
   text-decoration: none;
@@ -140,7 +146,7 @@ body {
 #avatar-selection .buttons p {
   text-align: center;
   font-family: "Quicksand";
-  color: #35424a;
+  color: var(--title-color);
 }
 
 #avatar-selection img {
@@ -151,7 +157,7 @@ body {
 .spacer {
   width: 1px;
   height: 100px;
-  background-color: #c8c7cc;
+  background-color: var(--spacer-color);
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -168,7 +174,7 @@ body {
 .select-avatar-message {
   font-family: "Quicksand";
   font-size: 20px;
-  color: #35424a;
+  color: var(--title-color);
 }
 
 .big-avatar {
@@ -182,7 +188,7 @@ body {
 .wiki-title {
   font-family: "Quicksand";
   font-size: 26px;
-  color: #35424a;
+  color: var(--title-color);
 }
 
 .wiki-content {
@@ -209,8 +215,8 @@ details summary {
   width: 100%;
   padding: 0.5rem 1.5rem;
   font-family: "Quicksand";
-  color: #35424a;
-  border-top: 1px solid #eaecf0;
+  color: var(--title-color);
+  border-bottom: 1px solid #eaecf0;
   position: relative;
   cursor: pointer;
   font-size: 1.25rem;
@@ -395,7 +401,7 @@ textarea-webkit-scrollbar {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  color: #037aff;
+  color: var(--primary-color);
 }
 
 .imgProfile {
@@ -424,7 +430,7 @@ textarea-webkit-scrollbar {
 
 .dropdown-trigger {
   cursor: pointer;
-  color: #037aff;
+  color: var(--primary-color);
   margin-right: 5px;
   float: right;
   margin-top: -24px;
@@ -645,7 +651,7 @@ div.content_data::-webkit-scrollbar {
   align-items: center;
   height: 50px;
   background: transparent;
-  color: #037aff;
+  color: var(--primary-color);
   text-align: center;
   padding: 5px;
   margin: 5px;
@@ -653,13 +659,13 @@ div.content_data::-webkit-scrollbar {
   border-radius: 15px;
   font-size: 14px;
   word-wrap: break-word;
-  border: 2px solid #037aff;
+  border: 2px solid var(--primary-color);
   font-weight: bold;
   width: 48%;
 }
 
 .menuChips:hover {
-  background: #037aff;
+  background: var(--primary-color);
   color: white;
 }
 
