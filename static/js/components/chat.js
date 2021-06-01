@@ -13,7 +13,7 @@ function scrollToBottomOfResults() {
  */
 function setUserResponse(message) {
     let date = new Date();
-    let dateString = date.getHours()+":"+date.getMinutes();
+    let dateString = date.getHours()+":"+(date.getMinutes()<10?'0':'') + date.getMinutes();
     //const user_response = `<img class="userAvatar" src='./static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
     const user_response = `<p class="userMsg">${message} <span class="time">${dateString}</span></p><div class="clearfix"></div>`;
     $(user_response).appendTo(".chats").show("slow");
@@ -32,7 +32,7 @@ function setUserResponse(message) {
  */
 function setBotResponse(response, status) {
     let date = new Date();
-    let dateString = date.getHours()+":"+date.getMinutes();
+    let dateString = date.getHours()+":"+(date.getMinutes()<10?'0':'') + date.getMinutes();
     // renders bot response after 500 milliseconds
     setTimeout(() => {
         hideBotTyping();
