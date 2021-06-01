@@ -225,7 +225,7 @@ function send(message) {
 // eslint-disable-next-line no-unused-vars
 function actionTrigger() {
     $.ajax({
-        url: `http://gtirouter.dsic.upv.es:55005/conversations/${sender_id}/execute`,
+        url: `http://vihrtualapp.gti-ia.upv.es/api/actions/conversations/${sender_id}/execute`,
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
@@ -262,7 +262,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "http://gtirouter.dsic.upv.es:55055/webhook/",
+        url: "http://vihrtualapp.gti-ia.upv.es/api/chatbot/webhook/",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
