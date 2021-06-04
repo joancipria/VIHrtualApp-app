@@ -249,12 +249,21 @@ body {
 .search {
   width: 100%;
   background-color: var(--search-background-color);
-  color: var(--search-color);
+  color: var(--title-color);
   border: 1px solid var(--search-background-color);
   border-radius: 5px;
   padding: 10px;
-  text-align: center;
   font-size: 0.9375rem;
+}
+
+.search:focus::placeholder {
+  color: transparent;
+}
+.search::placeholder {
+  color: var(--search-color);
+}
+.search:placeholder-shown{
+  text-align: center !important;
 }
 
 details[open] summary ~ * {
@@ -316,13 +325,12 @@ details p {
   font-size: 13px;
   float: right;
   padding: 3px;
-  font-family: 'AsapRegular';
+  font-family: "AsapRegular";
 }
 
 mark {
   background-color: var(--results-color);
 }
-
 /* ============= css related to chats =============== */
 .widget {
   flex-direction: column;
