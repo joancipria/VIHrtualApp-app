@@ -15,6 +15,7 @@
   --bot-message-background-color: #ffffff;
   --user-message-background-color: #effdde;
   --text-message-color: #0f0f0f;
+  --results-color: #f7e159;
 }
 
 @font-face {
@@ -308,6 +309,18 @@ details p {
   font-size: 0.95rem;
   margin: 0 0 1rem;
   padding-top: 1rem;
+}
+
+.results {
+  background-color: var(--results-color);
+  font-size: 13px;
+  float: right;
+  padding: 3px;
+  font-family: 'AsapRegular';
+}
+
+mark {
+  background-color: var(--results-color);
 }
 
 /* ============= css related to chats =============== */

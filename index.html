@@ -75,14 +75,15 @@
           </div>
         </div>
         <div class="wiki-content">
-          <input class="search" type="text" placeholder="Búscar información">
+          <input id="search" onkeyup="search(this.value)" class="search" type="text"
+            placeholder="Búscar información">
           <p class="wiki-title">Virus de la inmunodeficiencia humana</p>
           <p>El <b>virus de la inmunodeficiencia humana (VIH)</b> es un lentivirus que causa la infección por VIH.​ Se
             trata de
             un virus que, en promedio, en 10 años en países desarrollados o en cinco años en países con deficiente salud
             pública, provoca el desarrollo del síndrome de inmunodeficiencia adquirida (SIDA).​ </p>
           <details>
-            <summary>Origen</summary>
+            <summary>Origen<span class="results" hidden></span></summary>
             <p>
               La infección por el VIH en los seres humanos provino de un tipo de chimpancé de África Central. La versión
               del virus en los chimpancés (llamado virus de inmunodeficiencia símica o VIS) se pudo haber transmitido a
@@ -91,21 +92,21 @@
             </p>
           </details>
           <details>
-            <summary>Transmisión</summary>
+            <summary>Transmisión<span class="results" hidden></span></summary>
             <p>La mayor parte de las personas que contraen el VIH, lo contraen a través de las relaciones sexuales
               anales o vaginales, o al compartir agujas, jeringas u otros implementos para la inyección de drogas (por
               ejemplo, los calentadores).
             </p>
           </details>
           <details>
-            <summary>Prevención</summary>
+            <summary>Prevención<span class="results" hidden></span></summary>
             <p>Existen ahora más herramientas que nunca para prevenir el VIH. Puede usar estrategias, como la
               abstinencia (no tener relaciones sexuales), no compartir agujas nunca y usar condones de la manera
               correcta cada vez que tenga relaciones sexuales. También es posible que pueda aprovechar los medicamentos
               de prevención del VIH, como profilaxis prexposición (PrEP) y profilaxis posexposición (PEP).</p>
           </details>
           <details>
-            <summary>Diagnóstico</summary>
+            <summary>Diagnóstico<span class="results" hidden></span></summary>
             <p>La única manera de saber si tiene el VIH es haciéndose la prueba. Saber si tiene el VIH le da información
               importante para que usted y su pareja se mantengan sanos.
             </p>
@@ -216,7 +217,10 @@
       avatar.html.style.opacity = "1";
       avatars.active = avatar;
     }
+
+
   </script>
+  <script src="static/js/search.js"></script>
 </body>
 
 </html>
