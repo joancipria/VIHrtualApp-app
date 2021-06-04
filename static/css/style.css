@@ -202,11 +202,14 @@ body {
 }
 
 .spacer {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.line {
   width: 1px;
   height: 100px;
   background-color: var(--spacer-color);
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .privacy-alert {
