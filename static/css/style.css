@@ -82,7 +82,7 @@ body {
   color: #989eb1;
 }
 
-.flex-spacer{
+.flex-spacer {
   flex: 1;
 }
 /* ============= Layout CSS =============== */
@@ -124,12 +124,11 @@ body {
 }
 
 @media only screen and (max-width: 413px) {
-  .menuChips{
+  .menuChips {
     height: 65px !important;
     width: 100% !important;
-  }  
+  }
 }
-
 
 .screen {
   display: flex;
@@ -385,7 +384,7 @@ div.chats::-webkit-scrollbar {
 }
 
 .time {
-  font-family: 'Helvetica', 'Arial';
+  font-family: "Helvetica", "Arial";
   color: var(--time-color);
   font-size: 12px;
   float: right;
