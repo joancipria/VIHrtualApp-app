@@ -213,6 +213,7 @@ body {
 
 .privacy-alert {
   width: 75%;
+  font-size: 0.875rem;
 }
 
 .privacy-alert p {
@@ -222,7 +223,7 @@ body {
 
 .select-avatar-message {
   font-family: "Quicksand";
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--title-color);
 }
 
@@ -236,7 +237,7 @@ body {
 
 .wiki-title {
   font-family: "Quicksand";
-  font-size: 26px;
+  font-size: 1.5rem;
   color: var(--title-color);
 }
 
@@ -252,7 +253,7 @@ body {
   border-radius: 5px;
   padding: 10px;
   text-align: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 details[open] summary ~ * {
@@ -328,7 +329,7 @@ details p {
   color: var(--status-color);
   float: left;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .chats {
