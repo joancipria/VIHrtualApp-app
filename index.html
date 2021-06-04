@@ -29,9 +29,9 @@
         <canvas id="modal-chart"></canvas>
       </div>
 
-      <div id="chat" class="widget">
+      <div id="chat" class="widget" hidden="true">
         <div class="header">
-          <div class="action-left bot-info">
+          <div onclick="showAvatarSelection()" class="action-left bot-info">
             <img id="avatar" src="static/img/avatars/salva_circle.svg" alt="" draggable="false">
             <div class="bot-details">
               <span id="name" class="chat_header_title">Juan</span>
@@ -175,14 +175,22 @@
       document.getElementById("big-avatar").src = avatars.active.bigImg;
 
       screens.avatar.hidden = true;
+      showChat();
     }
 
     function showWiki() {
       screens.wiki.hidden = false;
+      screens.chat.hidden = true;
     }
 
     function showChat() {
       screens.wiki.hidden = true;
+      screens.chat.hidden = false;
+    }
+
+    function showAvatarSelection() {
+      screens.avatar.hidden = false;
+      screens.chat.hidden = true;
     }
 
     // Selects avatar
