@@ -51,6 +51,7 @@ function setBotResponse(response, status) {
                 // check if the response contains "text"
                 if (Object.hasOwnProperty.call(response[i], "text")) {
                     if (response[i].text != null) {
+                        response[i].text = customizeBot(response[i].text);
                         //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p><div class="clearfix"></div>`;
                         const BotResponse = `<p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
                         $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
@@ -378,3 +379,21 @@ $("#sendButton").on("click", (e) => {
     e.preventDefault();
     return false;
 });
+
+
+function customizeBot(message) {
+    // Replace name
+    message = message.replace("Juan", avatars.active.name);
+
+    // Strings to replace
+    let messagesToReplace = [{male: "encantado", female: "encantada"}];
+
+    // Replace male strings
+    if(avatars.active.name == avatars.female.name){
+        messagesToReplace.forEach(string => {
+                message = message.replace(string.male, string.female);
+        });
+    }
+
+    return message;
+}

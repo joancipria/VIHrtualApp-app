@@ -177,12 +177,17 @@
 
     // Start chat
     function start() {
+      // Set image avatars
       document.getElementById("avatar").src = avatars.active.img;
       document.getElementById("name").innerHTML = avatars.active.name;
       document.getElementById("big-avatar").src = avatars.active.bigImg;
 
+      // Show chat
       screens.avatar.hidden = true;
       showChat();
+
+      // Start conversation
+      customActionTrigger();
     }
 
     function showWiki() {
