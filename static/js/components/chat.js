@@ -38,7 +38,7 @@ function setBotResponse(response, status) {
         hideBotTyping();
         if (response.length < 1 && status !== "success") {
             // if there is no response from Rasa, send  fallback message to the user
-            const fallbackMsg = "Vaya, parece que he tenido un problema 😅! Inténtalo de nuevo más tarde.";
+            const fallbackMsg = "Vaya, parece que he tenido un problema 😅. Inténtalo de nuevo más tarde.";
 
             //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
             const BotResponse = `<p class="botMsg">${fallbackMsg}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
