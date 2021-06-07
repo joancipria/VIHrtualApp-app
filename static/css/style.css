@@ -333,6 +333,7 @@ mark {
 }
 /* ============= css related to chats =============== */
 .widget {
+  height: 100%;
   flex-direction: column;
   display: flex;
   min-height: 100vh;
