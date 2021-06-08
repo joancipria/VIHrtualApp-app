@@ -54,7 +54,8 @@ function setBotResponse(response, status) {
                         response[i].text = customizeBot(response[i].text);
                         //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p><div class="clearfix"></div>`;
                         const BotResponse = `<p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
-                        $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
+                        //$(BotResponse).appendTo(".chats").hide().fadeIn(1000);
+                        setTimeout(()=>{ $(BotResponse).appendTo(".chats").hide().fadeIn(1000); }, i*1000);
                     }
                 }
 
