@@ -336,9 +336,8 @@ mark {
   height: 100%;
   flex-direction: column;
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
-  background-color: var(--chat-background-color);
 }
 
 .chat_header_title {
@@ -359,6 +358,7 @@ mark {
   padding: 2px;
   overflow-y: auto;
   transition: 0.2s;
+  background-color: var(--chat-background-color);
 }
 
 div.chats::-webkit-scrollbar {
