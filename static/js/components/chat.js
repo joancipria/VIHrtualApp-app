@@ -387,7 +387,7 @@ function customizeBot(message) {
     message = message.replace("Juan", avatars.active.name);
 
     // Strings to replace
-    let messagesToReplace = [{male: "encantado", female: "encantada"}];
+    let messagesToReplace = [{male: "ncantado", female: "ncantada"}];
 
     // Replace male strings
     if(avatars.active.name == avatars.female.name){
