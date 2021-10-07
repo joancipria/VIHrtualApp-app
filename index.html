@@ -10,6 +10,7 @@
 
   <!--Main css-->
   <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  <link rel="stylesheet" href="static/css/viewer.min.css">
 
   <!-- Preload images -->
   <link rel="preload" as="image" href="./static/img/icons/details.svg">
@@ -75,8 +76,7 @@
           </div>
         </div>
         <div class="wiki-content">
-          <input id="search" onkeyup="search(this.value)" class="search" type="search"
-            placeholder="Búscar información">
+          <input id="search" onkeyup="search(this.value)" class="search" type="search" placeholder="Búscar información">
           <p class="wiki-title">Virus de la inmunodeficiencia humana</p>
           <p>El <b>virus de la inmunodeficiencia humana (VIH)</b> es un lentivirus que causa la infección por VIH.​ Se
             trata de
@@ -150,6 +150,9 @@
 
   <!--Chart.js Script -->
   <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+
+  <!--Image Viewer Script -->
+  <script type="text/javascript" src="static/js/lib/viewer.min.js"></script>
   <script>
     // App screens
     let screens = {
@@ -183,6 +186,9 @@
       document.getElementById("avatar").src = avatars.active.img;
       document.getElementById("name").innerHTML = avatars.active.name;
       document.getElementById("big-avatar").src = avatars.active.bigImg;
+
+      // Clear chat
+      clearChat();
 
       // Show chat
       screens.avatar.hidden = true;
@@ -218,6 +224,22 @@
       avatars.active = avatar;
     }
 
+    // Init image viewer
+    const viewer = new Viewer(document.body, {
+      inline: false,
+      toolbar: false,
+      title: false,
+      navbar: false,
+      rotatable: false,
+      slideOnTouch: false,
+      viewed() {
+        //viewer.zoomTo(1);
+      },
+      filter(image) {
+        // Only apply to img cards
+        return image.className == "imgcard";
+      },
+    });
 
   </script>
   <script src="static/js/search.js"></script>
