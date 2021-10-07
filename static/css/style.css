@@ -40,6 +40,7 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   font-family: "AsapRegular", "Lato", sans-serif;
