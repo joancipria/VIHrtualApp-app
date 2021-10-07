@@ -43,8 +43,7 @@ function setBotResponse(response, status) {
             //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
             const BotResponse = `<p class="botMsg">${fallbackMsg}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
 
-            $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
-            scrollToBottomOfResults();
+            renderResponse(BotResponse);
         } else {
             // if we get response from Rasa
             for (let i = 0; i < response.length; i += 1) {
@@ -54,8 +53,7 @@ function setBotResponse(response, status) {
                         response[i].text = customizeBot(response[i].text);
                         //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p><div class="clearfix"></div>`;
                         const BotResponse = `<p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
-                        //$(BotResponse).appendTo(".chats").hide().fadeIn(1000);
-                        setTimeout(()=>{ $(BotResponse).appendTo(".chats").hide().fadeIn(1000); }, i*1000);
+                        renderResponse(BotResponse, i);
                     }
                 }
 
@@ -63,8 +61,7 @@ function setBotResponse(response, status) {
                 if (Object.hasOwnProperty.call(response[i], "image")) {
                     if (response[i].image !== null) {
                         const BotResponse = `<div class="singleCard"><img class="imgcard" src="${response[i].image}"></div><div class="clearfix">`;
-
-                        $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
+                        renderResponse(BotResponse, i);
                     }
                 }
 
@@ -83,7 +80,7 @@ function setBotResponse(response, status) {
                             const video_url = response[i].attachment.payload.src;
 
                             const BotResponse = `<div class="video-container"> <iframe src="${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
-                            $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
+                            renderResponse(BotResponse, i);
                         }
                     }
                 }
@@ -224,7 +221,7 @@ function send(message) {
  *
  * `Note: this method will only work in Rasa 1.x`
  */
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable-next-line no-unused-vars
 function actionTrigger() {
     $.ajax({
         url: `http://vihrtualapp.gti-ia.upv.es/api/actions/conversations/${sender_id}/execute`,
@@ -250,7 +247,7 @@ function actionTrigger() {
             $("#userInput").prop("disabled", false);
         },
     });
-}
+}*/
 
 /**
  * sends an event to the custom action server,
@@ -264,7 +261,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "http://vihrtualapp.gti-ia.upv.es/api/chatbot/webhook/",
+        url: action_server_url,
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
@@ -313,10 +310,10 @@ function restartConversation() {
     $(".usrInput").val("");
     send("/restart");
 }
-// triggers restartConversation function.
-$("#restart").click(() => {
-    restartConversation();
-});
+// // triggers restartConversation function.
+// $("#restart").click(() => {
+//     restartConversation();
+// });
 
 /**
  * if user hits enter or send button
@@ -397,4 +394,24 @@ function customizeBot(message) {
     }
 
     return message;
+}
+
+// Renders response with animation and delay between messages
+function renderResponse(response, messageIndex = 0) {
+    setTimeout(() => {
+        // Render response with fade in animation
+        $(response).appendTo(".chats").hide().fadeIn(fade_duration_messages*1000);
+        
+        // Update image viewer to detect new images
+        viewer.update();
+        
+        // Scroll to bottom
+        scrollToBottomOfResults();
+    },
+        messageIndex * (delay_between_messages*1000) // Delay bewteen messages
+    );
+}
+
+function clearChat(){
+    document.getElementById("chats").innerHTML = "";
 }
