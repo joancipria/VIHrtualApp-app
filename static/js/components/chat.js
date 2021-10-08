@@ -406,7 +406,7 @@ function renderResponse(response, messageIndex = 0) {
         viewer.update();
         
         // Scroll to bottom
-        scrollToBottomOfResults();
+        setTimeout(() => {scrollToBottomOfResults()},100);
     },
         messageIndex * (delay_between_messages*1000) // Delay bewteen messages
     );
