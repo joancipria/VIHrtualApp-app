@@ -2,7 +2,7 @@
  *  adds vertically stacked buttons as a bot response
  * @param {Array} suggestions buttons json array
  */
-function addSuggestion(suggestions) {
+function addSuggestion(suggestions, messageIndex = 0) {
     setTimeout(() => {
         const suggLength = suggestions.length;
         $(
@@ -18,7 +18,7 @@ function addSuggestion(suggestions) {
             ).appendTo(".menu");
         }
         scrollToBottomOfResults();
-    }, 1000);
+    }, messageIndex * (delay_between_messages * 1000));
 }
 
 

@@ -68,7 +68,7 @@ function setBotResponse(response, status) {
                 // check if the response contains "buttons"
                 if (Object.hasOwnProperty.call(response[i], "buttons")) {
                     if (response[i].buttons.length > 0) {
-                        addSuggestion(response[i].buttons);
+                        addSuggestion(response[i].buttons, i);
                     }
                 }
 
