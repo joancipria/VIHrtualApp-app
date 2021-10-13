@@ -1,27 +1,27 @@
-# VIHrtualApp-app
-VIHrtualApp-app is a web frontend for VIHrtualApp, an opensource (spanish) HIV Chatbot built with Rasa. Check out the server repo [here](https://github.com/joancipria/VihrtualApp/).
+# VIHrtual-App (Cliente)
+VIHrtual-App es un chatbot de código libre para la divulgación médica del VIH. Este repositorio contiene el código fuente del cliente web. Puedes acceder al repositorio del servidor desde [aquí](https://github.com/joancipria/VihrtualApp).
 
-## 🔧 Setup
+<img style="width: 60%" title="a title" alt="Alt text" src="https://raw.githubusercontent.com/joancipria/VihrtualApp-app/master/screenshot.png">
 
-Set your server settings in `static/js/constants.js`
+## 🔧 Configuración
+Establece la configuración del servidor en `static/js/constants.js`
 
 ## 🤔 Overview
 
-`static/js/lib/` - Contains external JS libraries such as ChartJS, jQuery etc.
+`static/js/lib/` - Contiene bibliotecas JS externas como ChartJS, jQuery, etc.
 
-`static/js/components/` - Contains all UI component's logic
+`static/js/components/` - Contiene toda la lógica de los componentes de la interfaz de usuario
 
-`static/css/` - Contains all stylesheets, including the main `style.css`
+`static/css/` - Contiene todas las hojas de estilo, incluida la principal `style.css`.
 
-`static/fonts/` - Contains used fonts
+`static/fonts/` - Contiene las fuentes utilizadas
 
-`static/img/` - Contains all graphical resources like icons and avatars.
+`static/img/` - Contiene todos los recursos gráficos como iconos y avatares.
 
-`index.html` - Main app file.
+`index.html` - Archivo principal de la aplicación.
 
-## 👨‍💻 Contributing
+## 👨‍💻 Contribuciones
+Siéntete libre de enviar una `pull request` a este repositorio con tus contribuciones.
 
-Feel free to send a pull request to this repository with your code contributions
-
-## 📜 License
-Licensed under the GNU General Public License v3.
+## 📜 Licencia
+Licenciado bajo GNU General Public License v3.
