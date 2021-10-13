@@ -693,6 +693,12 @@ div.content_data::-webkit-scrollbar {
   border-radius: 10px;
 }
 
+@media only screen and (min-width: 1100px) {
+  .imgcard {
+    max-width: 50%;
+  }
+}
+
 /* css for suggestions buttons */
 
 .suggestions {
