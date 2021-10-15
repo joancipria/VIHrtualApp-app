@@ -6,7 +6,7 @@ VIHrtual-App es un chatbot de código libre para la divulgación médica del VIH
 ## 🔧 Configuración
 Establece la configuración del servidor en `static/js/constants.js`
 
-## 🤔 Overview
+## 🤔 Resumen
 
 `static/js/lib/` - Contiene bibliotecas JS externas como ChartJS, jQuery, etc.
 
