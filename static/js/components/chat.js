@@ -96,7 +96,7 @@ function setBotResponse(response, status) {
 
                     // check if the custom payload type is "pdf_attachment"
                     if (payload === "pdf_attachment") {
-                        renderPdfAttachment(response[i]);
+                        renderPdfAttachment(response[i], i);
                         return;
                     }
 
