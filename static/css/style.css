@@ -138,6 +138,18 @@ body {
     max-width: 100%;
     border: none;
   }
+
+  .button {
+    width: 75% !important;
+  }
+
+  .logos{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 20px;
+    position: relative !important;
+  }
 }
 
 @media only screen and (max-width: 413px) {
@@ -189,7 +201,7 @@ body {
   text-decoration: none;
   padding: 16px;
   text-align: center;
-  width: 75%;
+  width: 15%;
 }
 
 #avatar-selection {
@@ -1178,4 +1190,14 @@ video:focus {
 .pdf_link a {
   color: var(--primary-color);;
   text-decoration: none;
+}
+
+.logos{
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.logos img{
+  width: 150px;
+  height: auto !important;
 }
