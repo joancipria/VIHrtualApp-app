@@ -191,6 +191,11 @@ function send(message) {
         success(botResponse, status) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
+            // Split button messages
+            if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !==0){
+                botResponse = splitButtonMessages(botResponse);        
+            }
+
             // if user wants to restart the chat and clear the existing chat contents
             if (message.toLowerCase() === "/restart") {
                 $("#userInput").prop("disabled", false);
@@ -410,6 +415,23 @@ function renderResponse(response, messageIndex = 0) {
     },
         messageIndex * (delay_between_messages*1000) // Delay bewteen messages
     );
+}
+
+// Split messages with buttons
+function splitButtonMessages(botResponse){
+    if (botResponse.length == 1){
+        let splitText = botResponse[0].text.split("\n\n");
+        botResponse[0].text = splitText[0];
+        botResponse.push(
+            {
+                recipient_id: botResponse[0].recipient_id,
+                text: splitText[1],
+                buttons: botResponse[0].buttons
+            }
+        );
+        botResponse[0].buttons = [];
+    } 
+    return botResponse;
 }
 
 function clearChat(){
