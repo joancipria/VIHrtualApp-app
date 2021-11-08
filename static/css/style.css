@@ -1200,4 +1200,5 @@ video:focus {
 .logos img{
   width: 150px;
   height: auto !important;
+  cursor: default !important;
 }
