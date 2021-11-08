@@ -193,7 +193,7 @@ function send(message) {
 
             // Split button messages
             if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !==0){
-                botResponse = splitButtonMessages(botResponse);        
+                botResponse = splitMessages(botResponse);
             }
 
             // if user wants to restart the chat and clear the existing chat contents
@@ -417,20 +417,27 @@ function renderResponse(response, messageIndex = 0) {
     );
 }
 
-// Split messages with buttons
-function splitButtonMessages(botResponse){
-    if (botResponse.length == 1){
-        let splitText = botResponse[0].text.split("\n\n");
-        botResponse[0].text = splitText[0];
-        botResponse.push(
-            {
-                recipient_id: botResponse[0].recipient_id,
-                text: splitText[1],
-                buttons: botResponse[0].buttons
+// Split messages
+function splitMessages(botResponse){
+
+    for (let i = 0; i < botResponse.length; i++) {
+        // If response has text 
+        if(botResponse[i].text){
+
+            // Check if contains break line
+            let splitText = botResponse[i].text.split("\n\n");
+            if (splitText.length >= 2){
+                // Then split in 2 messages
+                botResponse[i].text = splitText[splitText.length-1];
+    
+                botResponse.splice(i,0,{
+                    recipient_id: botResponse[i].recipient_id,
+                    text: splitText[0]
+                });
             }
-        );
-        botResponse[0].buttons = [];
-    } 
+        }
+
+    }
     return botResponse;
 }
 
