@@ -12,11 +12,16 @@
   <link rel="stylesheet" type="text/css" href="static/css/style.css" />
   <link rel="stylesheet" href="static/css/viewer.min.css">
 
+  <!-- Custom emojis -->
+  <link rel="stylesheet" type="text/css" href="static/emojis/customEmojis.css" />
+
   <!-- Preload images -->
   <link rel="preload" as="image" href="./static/img/icons/details.svg">
   <link rel="preload" as="image" href="./static/img/icons/question.svg">
   <link rel="preload" as="image" href="./static/img/icons/send.svg">
   <link rel="preload" as="image" href="./static/img/icons/back.svg">
+  <link rel="preload" as="image" href="./static/img/icons/arrow.svg">
+  <link rel="preload" as="image" href="./static/img/icons/pdf.svg">
   <link rel="preload" as="image" href="./static/img/avatars/irene_big.svg">
   <link rel="preload" as="image" href="./static/img/avatars/salva_big.svg">
 </head>
@@ -117,7 +122,7 @@
     <div id="avatar-selection" class="screen">
       <p class="select-avatar-message">Elije un asistente</p>
       <div class="buttons">
-        <div id="female-avatar" style="opacity: 0.4;">
+        <div id="female-avatar" class="avatar-button">
           <img draggable="false" onclick="selectAvatar(avatars.female)" src="static/img/avatars/irene_circle.svg"
             alt="">
           <p>Irene</p>
@@ -125,7 +130,7 @@
         <div class="spacer">
           <div class="line"></div>
         </div>
-        <div id="male-avatar">
+        <div id="male-avatar" class="avatar-button selected-avatar">
           <img draggable="false" onclick="selectAvatar(avatars.male)" src="static/img/avatars/salva_circle.svg" alt="">
           <p>Salva</p>
         </div>
@@ -139,8 +144,8 @@
           aceptas tu participación voluntaria.
         </p>
         <div class="logos">
-          <img src="static/img/logos/elche.jpg" alt="">
-          <img src="static/img/logos/upv.jpg" alt="">
+          <img draggable="false" src="static/img/logos/elche.jpg" alt="">
+          <img draggable="false" src="static/img/logos/upv.jpg" alt="">
         </div>
       </div>
     </div>
@@ -220,11 +225,11 @@
     // Selects avatar
     function selectAvatar(avatar) {
       // Both to 50% opacity
-      avatars.male.html.style.opacity = "0.4";
-      avatars.female.html.style.opacity = "0.4";
+      avatars.male.html.classList.remove("selected-avatar");
+      avatars.female.html.classList.remove("selected-avatar");
 
       // Current to 100% opacity
-      avatar.html.style.opacity = "1";
+      avatar.html.classList.add("selected-avatar");
       avatars.active = avatar;
     }
 
