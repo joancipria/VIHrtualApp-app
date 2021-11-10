@@ -118,8 +118,12 @@ function setBotResponse(response, status) {
                     // check if the custom payload type is "cardsCarousel"
                     if (payload === "cardsCarousel") {
                         const restaurantsData = response[i].custom.data;
-                        showCardsCarousel(restaurantsData);
-                        return;
+                        setTimeout(() => {
+                            showCardsCarousel(restaurantsData);
+                        },
+                            i * (delay_between_messages*1000) // Delay bewteen messages
+                        );
+                        //return;
                     }
 
                     // check if the custom payload type is "chart"
@@ -344,7 +348,7 @@ $(".usrInput").on("keyup keypress", (e) => {
             modalChart.destroy();
         }
 
-        $("#paginated_cards").remove();
+        //$("#paginated_cards").remove();
         $(".suggestions").remove();
         $(".quickReplies").remove();
         $(".usrInput").blur();
