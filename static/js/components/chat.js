@@ -196,9 +196,12 @@ function send(message) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
             // Split button messages
-            if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !==0){
-                botResponse = splitMessages(botResponse);
+            if (botResponse.length != 0){
+                if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !==0){
+                    botResponse = splitMessages(botResponse);
+                }
             }
+
 
             // if user wants to restart the chat and clear the existing chat contents
             if (message.toLowerCase() === "/restart") {
