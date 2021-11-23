@@ -155,7 +155,8 @@ body {
 @media only screen and (max-width: 520px) {
   .menuChips {
     height: 65px !important;
-    width: 100% !important;
+    /* width: 100% !important; */
+    font-size: 11px !important;
   }
 }
 
@@ -753,8 +754,8 @@ div.content_data::-webkit-scrollbar {
 
 .menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  /* flex-wrap: wrap;
+  justify-content: space-around; */
 }
 
 .menuChips {
