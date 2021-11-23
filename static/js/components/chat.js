@@ -35,7 +35,7 @@ function setBotResponse(response, status) {
     let dateString = date.getHours()+":"+(date.getMinutes()<10?'0':'') + date.getMinutes();
     // renders bot response after 500 milliseconds
     setTimeout(() => {
-        hideBotTyping();
+        //hideBotTyping();
         if (response.length < 1 && status !== "success") {
             // if there is no response from Rasa, send  fallback message to the user
             const fallbackMsg = "Vaya, parece que he tenido un problema 😅. Inténtalo de nuevo más tarde.";
@@ -45,15 +45,23 @@ function setBotResponse(response, status) {
 
             renderResponse(BotResponse);
         } else {
+            let nextDelay = 0;
             // if we get response from Rasa
             for (let i = 0; i < response.length; i += 1) {
+                
+                let delay = (i * (delay_between_messages*1000))+nextDelay;
+                
+                if(response[i].text){
+                    nextDelay = response[i].text.length*27;
+                }
+
                 // check if the response contains "text"
                 if (Object.hasOwnProperty.call(response[i], "text")) {
                     if (response[i].text != null) {
                         response[i].text = customizeBot(response[i].text);
                         //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p><div class="clearfix"></div>`;
                         const BotResponse = `<p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
-                        renderResponse(BotResponse, i);
+                        renderResponse(BotResponse, delay);
                     }
                 }
 
@@ -61,14 +69,14 @@ function setBotResponse(response, status) {
                 if (Object.hasOwnProperty.call(response[i], "image")) {
                     if (response[i].image !== null) {
                         const BotResponse = `<div class="singleCard"><img class="imgcard" src="${response[i].image}"></div><div class="clearfix">`;
-                        renderResponse(BotResponse, i);
+                        renderResponse(BotResponse, delay);
                     }
                 }
 
                 // check if the response contains "buttons"
                 if (Object.hasOwnProperty.call(response[i], "buttons")) {
                     if (response[i].buttons.length > 0) {
-                        addSuggestion(response[i].buttons, i);
+                        addSuggestion(response[i].buttons, delay);
                     }
                 }
 
@@ -80,7 +88,7 @@ function setBotResponse(response, status) {
                             const video_url = response[i].attachment.payload.src;
 
                             const BotResponse = `<div class="video-container"> <iframe src="${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
-                            renderResponse(BotResponse, i);
+                            renderResponse(BotResponse, delay);
                         }
                     }
                 }
@@ -96,7 +104,7 @@ function setBotResponse(response, status) {
 
                     // check if the custom payload type is "pdf_attachment"
                     if (payload === "pdf_attachment") {
-                        renderPdfAttachment(response[i], i);
+                        renderPdfAttachment(response[i], delay);
                         return;
                     }
 
@@ -121,7 +129,7 @@ function setBotResponse(response, status) {
                         setTimeout(() => {
                             showCardsCarousel(restaurantsData);
                         },
-                            i * (delay_between_messages*1000) // Delay bewteen messages
+                            delay // Delay bewteen messages
                         );
                         //return;
                     }
@@ -409,18 +417,22 @@ function customizeBot(message) {
 }
 
 // Renders response with animation and delay between messages
-function renderResponse(response, messageIndex = 0) {
+function renderResponse(response,delay = 0) {
+    setTimeout(()=>{
+        showBotTyping();
+    }, delay*0.2);
+
     setTimeout(() => {
         // Render response with fade in animation
         $(response).appendTo(".chats").hide().fadeIn(fade_duration_messages*1000);
-        
+        hideBotTyping();
         // Update image viewer to detect new images
         viewer.update();
         
         // Scroll to bottom
         setTimeout(() => {scrollToBottomOfResults()},100);
     },
-        messageIndex * (delay_between_messages*1000) // Delay bewteen messages
+        delay // Delay bewteen messages
     );
 }
 

@@ -191,6 +191,7 @@
 
     // Start chat
     function start() {
+      showBotTyping();
       // Set image avatars
       document.getElementById("avatar").src = avatars.active.img;
       document.getElementById("name").innerHTML = avatars.active.name;

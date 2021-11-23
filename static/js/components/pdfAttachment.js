@@ -2,7 +2,7 @@
  * renders pdf attachment on to the chat screen
  * @param {Object} pdf_data json object
  */
-function renderPdfAttachment(pdf_data, messageIndex = 0) {
+function renderPdfAttachment(pdf_data, delay = 0) {
     const { url: pdf_url } = pdf_data.custom;
     const { title: pdf_title } = pdf_data.custom;
     const pdf_attachment = `<div class="pdf_attachment"><div class="row"><div style="flex: 2" class="col pdf_icon">
@@ -13,6 +13,6 @@ ${pdf_title} </a></div></div></div>`;
         $(".chats").append(pdf_attachment);
         scrollToBottomOfResults();
     },
-        messageIndex * (delay_between_messages * 1000)
+        delay
     );
 }
