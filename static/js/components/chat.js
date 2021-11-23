@@ -46,13 +46,14 @@ function setBotResponse(response, status) {
             renderResponse(BotResponse);
         } else {
             let nextDelay = 0;
+            let delay = 0;
             // if we get response from Rasa
             for (let i = 0; i < response.length; i += 1) {
                 
-                let delay = (i * (delay_between_messages*1000))+nextDelay;
+                delay += (i * (delay_between_messages*1000))+nextDelay;
                 
                 if(response[i].text){
-                    nextDelay = response[i].text.length*27;
+                    nextDelay = response[i].text.length*30;
                 }
 
                 // check if the response contains "text"
@@ -420,7 +421,7 @@ function customizeBot(message) {
 function renderResponse(response,delay = 0) {
     setTimeout(()=>{
         showBotTyping();
-    }, delay*0.2);
+    }, delay*0.5);
 
     setTimeout(() => {
         // Render response with fade in animation
