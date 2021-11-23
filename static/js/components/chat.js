@@ -362,7 +362,7 @@ $(".usrInput").on("keyup keypress", (e) => {
         //$("#paginated_cards").remove();
         $(".suggestions").remove();
         $(".quickReplies").remove();
-        $(".usrInput").blur();
+        //$(".usrInput").blur();
         setUserResponse(text);
         send(text);
         e.preventDefault();
@@ -390,7 +390,7 @@ $("#sendButton").on("click", (e) => {
     $(".suggestions").remove();
     $("#paginated_cards").remove();
     $(".quickReplies").remove();
-    $(".usrInput").blur();
+    //$(".usrInput").blur();
     $(".dropDownMsg").remove();
     setUserResponse(text);
     send(text);
