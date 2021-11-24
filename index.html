@@ -64,7 +64,8 @@
 
         <!--keypad for user to type the message -->
         <div class="keypad">
-          <textarea onfocus="scrollToBottomOfResults()" id="userInput" placeholder="Escribe tu pregunta aquí" class="usrInput"></textarea>
+          <textarea onfocus="scrollToBottomOfResults()" id="userInput" placeholder="Escribe tu pregunta aquí"
+            class="usrInput"></textarea>
           <div id="sendButton">
             <img draggable="false" class="send" src="static/img/icons/send.svg" alt="">
           </div>
@@ -253,6 +254,12 @@
 
   </script>
   <script src="static/js/search.js"></script>
+  <script>
+    // Scroll to bottom on window resize (mobile keyboard)
+    window.addEventListener('resize', function (event) {
+      scrollToBottomOfResults();
+    }, true);
+  </script>
 </body>
 
 </html>

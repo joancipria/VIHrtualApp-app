@@ -3,7 +3,7 @@
  */
 function scrollToBottomOfResults() {
     const terminalResultsDiv = document.getElementById("chats");
-    terminalResultsDiv.scrollTop = terminalResultsDiv.scrollHeight;
+    terminalResultsDiv.scrollTo(0,terminalResultsDiv.scrollHeight);
 }
 
 
