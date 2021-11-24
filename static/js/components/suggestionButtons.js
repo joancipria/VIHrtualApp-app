@@ -17,7 +17,6 @@ function addSuggestion(suggestions, delay = 0) {
                 `<div class="menuChips" data-payload='${suggestions[i].payload}'>${suggestions[i].title}</div>`,
             ).appendTo(".menu");
         }
-        scrollToBottomOfResults();
     }, delay);
 }
 

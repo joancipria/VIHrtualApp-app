@@ -68,7 +68,6 @@ function createChart(
         options,
     });
 
-    scrollToBottomOfResults();
 }
 // function to render the charts in the modal
 

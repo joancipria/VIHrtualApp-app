@@ -12,7 +12,6 @@ function showQuickReplies(quickRepliesData) {
 
     const quickReplies = `<div class="quickReplies">${chips}</div><div class="clearfix"></div>`;
     $(quickReplies).appendTo(".chats").fadeIn(1000);
-    scrollToBottomOfResults();
     const slider = document.querySelector(".quickReplies");
     let isDown = false;
     let startX;

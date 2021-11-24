@@ -34,8 +34,6 @@ function showCardsCarousel(cardsToAdd) {
         $(".cards .arrow.next").fadeIn("0");
     }
 
-    scrollToBottomOfResults();
-
     const card = document.querySelector("#paginated_cards");
     const card_scroller = card.querySelector(".cards_scroller");
     const cardsNum = document.getElementsByClassName("carousel_cards").length;

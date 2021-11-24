@@ -10,7 +10,6 @@ function renderDropDwon(drop_down_data) {
     }
     const drop_down_select = `<div class="dropDownMsg"><select class="browser-default dropDownSelect"> <option value="" disabled selected>Choose your option</option>${drop_down_options}</select></div>`;
     $(".chats").append(drop_down_select);
-    scrollToBottomOfResults();
     // add event handler if user selects a option.
     // eslint-disable-next-line func-names
     $("select").on("change", function () {

@@ -18,5 +18,4 @@ function createCollapsible(collapsible_data) {
 
     // initialize the collapsible
     $(".collapsible").collapsible();
-    scrollToBottomOfResults();
 }

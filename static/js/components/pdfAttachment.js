@@ -11,7 +11,6 @@ ${pdf_title} </a></div></div></div>`;
 
     setTimeout(() => {
         $(".chats").append(pdf_attachment);
-        scrollToBottomOfResults();
     },
         delay
     );
