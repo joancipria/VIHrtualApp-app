@@ -9,17 +9,5 @@ function include(file) {
   document.getElementsByTagName('head').item(0).appendChild(script);
 }
 
-
-/* Bot pop-up intro
-document.addEventListener("DOMContentLoaded", () => {
-  const elemsTap = document.querySelector(".tap-target");
-  // eslint-disable-next-line no-undef
-  const instancesTap = M.TapTarget.init(elemsTap, {});
-  instancesTap.open();
-  setTimeout(() => {
-    instancesTap.close();
-  }, 4000);
-});*/
-
 /* import components */
 include('./static/js/components/index.js');
