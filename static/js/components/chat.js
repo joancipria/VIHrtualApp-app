@@ -1,3 +1,6 @@
+// Detect device
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 /**
  * scroll to the bottom of the chats after new message has been added to chat
  */
@@ -9,9 +12,9 @@ const targetNode = document.getElementById('chats');
 const config = { attributes: true, childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
-const callback = function(mutationsList, observer) {
+const callback = function (mutationsList, observer) {
     // Use traditional 'for loops' for IE 11
-    for(const mutation of mutationsList) {
+    for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             //console.log('A child node has been added or removed.');
             scrollToBottomOfResults();
@@ -30,7 +33,7 @@ observer.observe(targetNode, config);
 
 function scrollToBottomOfResults() {
     const terminalResultsDiv = document.getElementById("chats");
-    terminalResultsDiv.scrollTo(0,terminalResultsDiv.scrollHeight);
+    terminalResultsDiv.scrollTo(0, terminalResultsDiv.scrollHeight);
 }
 
 // Scroll to bottom on window resize (mobile keyboard)
@@ -45,7 +48,7 @@ window.addEventListener('resize', function (event) {
  */
 function setUserResponse(message) {
     let date = new Date();
-    let dateString = date.getHours()+":"+(date.getMinutes()<10?'0':'') + date.getMinutes();
+    let dateString = date.getHours() + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
     //const user_response = `<img class="userAvatar" src='./static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
     const user_response = `<p class="userMsg">${message} <span class="time">${dateString}</span></p><div class="clearfix"></div>`;
     $(user_response).appendTo(".chats").show("slow");
@@ -63,7 +66,7 @@ function setUserResponse(message) {
  */
 function setBotResponse(response, status) {
     let date = new Date();
-    let dateString = date.getHours()+":"+(date.getMinutes()<10?'0':'') + date.getMinutes();
+    let dateString = date.getHours() + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
     // renders bot response after 500 milliseconds
     setTimeout(() => {
         //hideBotTyping();
@@ -80,11 +83,15 @@ function setBotResponse(response, status) {
             let delay = 0;
             // if we get response from Rasa
             for (let i = 0; i < response.length; i += 1) {
-                
-                delay += (i * (delay_between_messages*1000))+nextDelay;
-                
-                if(response[i].text){
-                    nextDelay = response[i].text.length*30;
+
+                if (isMobile) {
+                    delay += (i * (delay_between_messages * 1000)) + nextDelay;
+
+                    if (response[i].text) {
+                        nextDelay = response[i].text.length * 30;
+                    }
+                } else {
+                    delay = i * (delay_between_messages * 1000);
                 }
 
                 // check if the response contains "text"
@@ -234,8 +241,8 @@ function send(message) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
             // Split button messages
-            if (botResponse.length != 0){
-                if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !==0){
+            if (botResponse.length != 0) {
+                if (botResponse[0].buttons && botResponse[0].text.split("\n\n").length !== 0) {
                     botResponse = splitMessages(botResponse);
                 }
             }
@@ -434,12 +441,12 @@ function customizeBot(message) {
     message = message.replace("Juan", avatars.active.name);
 
     // Strings to replace
-    let messagesToReplace = [{male: "ncantado", female: "ncantada"}];
+    let messagesToReplace = [{ male: "ncantado", female: "ncantada" }];
 
     // Replace male strings
-    if(avatars.active.name == avatars.female.name){
+    if (avatars.active.name == avatars.female.name) {
         messagesToReplace.forEach(string => {
-                message = message.replace(string.male, string.female);
+            message = message.replace(string.male, string.female);
         });
     }
 
@@ -447,18 +454,18 @@ function customizeBot(message) {
 }
 
 // Renders response with animation and delay between messages
-function renderResponse(response,delay = 0) {
-    setTimeout(()=>{
+function renderResponse(response, delay = 0) {
+    setTimeout(() => {
         showBotTyping();
-    }, delay*0.5);
+    }, delay * 0.5);
 
     setTimeout(() => {
         // Render response with fade in animation
-        $(response).appendTo(".chats").hide().fadeIn(fade_duration_messages*1000);
+        $(response).appendTo(".chats").hide().fadeIn(fade_duration_messages * 1000);
         hideBotTyping();
         // Update image viewer to detect new images
         viewer.update();
-        
+
         // Scroll to bottom
         //setTimeout(() => {scrollToBottomOfResults()},100);
     },
@@ -467,19 +474,19 @@ function renderResponse(response,delay = 0) {
 }
 
 // Split messages
-function splitMessages(botResponse){
+function splitMessages(botResponse) {
 
     for (let i = 0; i < botResponse.length; i++) {
         // If response has text 
-        if(botResponse[i].text){
+        if (botResponse[i].text) {
 
             // Check if contains break line
             let splitText = botResponse[i].text.split("\n\n");
-            if (splitText.length >= 2){
+            if (splitText.length >= 2) {
                 // Then split in 2 messages
-                botResponse[i].text = splitText[splitText.length-1];
-    
-                botResponse.splice(i,0,{
+                botResponse[i].text = splitText[splitText.length - 1];
+
+                botResponse.splice(i, 0, {
                     recipient_id: botResponse[i].recipient_id,
                     text: splitText[0]
                 });
@@ -490,6 +497,6 @@ function splitMessages(botResponse){
     return botResponse;
 }
 
-function clearChat(){
+function clearChat() {
     document.getElementById("chats").innerHTML = "";
 }
