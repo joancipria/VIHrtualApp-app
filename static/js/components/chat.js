@@ -238,7 +238,7 @@ function send(message) {
         contentType: "application/json",
         data: JSON.stringify({ message, sender: sender_id }),
         success(botResponse, status) {
-            console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
+            //console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
             // Split button messages
             if (botResponse.length != 0) {
@@ -328,7 +328,7 @@ function customActionTrigger() {
             },
         }),
         success(botResponse, status) {
-            console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
+            //console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
             if (Object.hasOwnProperty.call(botResponse, "responses")) {
                 setBotResponse(botResponse.responses);

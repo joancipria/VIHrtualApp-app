@@ -44,7 +44,7 @@ function showQuickReplies(quickRepliesData) {
 $(document).on("click", ".quickReplies .chip", function () {
     const text = this.innerText;
     const payload = this.getAttribute("data-payload");
-    console.log("chip payload: ", this.getAttribute("data-payload"));
+    //console.log("chip payload: ", this.getAttribute("data-payload"));
     setUserResponse(text);
     send(payload);
 

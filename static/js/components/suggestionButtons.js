@@ -26,7 +26,7 @@ $(document).on("click", ".menu .menuChips", function () {
     $(".usrInput").focus();
     const text = this.innerText;
     const payload = this.getAttribute("data-payload");
-    console.log("payload: ", this.getAttribute("data-payload"));
+    //"payload: ", this.getAttribute("data-payload"));
     setUserResponse(text);
     send(payload);
 
