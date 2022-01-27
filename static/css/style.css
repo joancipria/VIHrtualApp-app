@@ -207,6 +207,7 @@ body {
 #avatar-selection {
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #avatar-selection .buttons {
