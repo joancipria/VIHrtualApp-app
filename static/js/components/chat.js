@@ -83,7 +83,7 @@ function setBotResponse(response, status) {
             let delay = 0;
             // if we get response from Rasa
             for (let i = 0; i < response.length; i += 1) {
-
+                let last = i==response.length-1;
                 if (isMobile) {
                     delay += (i * (delay_between_messages * 1000)) + nextDelay;
 
@@ -100,7 +100,7 @@ function setBotResponse(response, status) {
                         response[i].text = customizeBot(response[i].text);
                         //const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p><div class="clearfix"></div>`;
                         const BotResponse = `<p class="botMsg">${response[i].text.replace(/(?:\r\n|\r|\n)/g, '<br>')}<span class="time">${dateString}</span></p><div class="clearfix"></div>`;
-                        renderResponse(BotResponse, delay);
+                        renderResponse(BotResponse, delay, last);
                     }
                 }
 
@@ -108,7 +108,7 @@ function setBotResponse(response, status) {
                 if (Object.hasOwnProperty.call(response[i], "image")) {
                     if (response[i].image !== null) {
                         const BotResponse = `<div class="singleCard"><img class="imgcard" src="${response[i].image}"></div><div class="clearfix">`;
-                        renderResponse(BotResponse, delay);
+                        renderResponse(BotResponse, delay, last);
                     }
                 }
 
@@ -127,7 +127,7 @@ function setBotResponse(response, status) {
                             const video_url = response[i].attachment.payload.src;
 
                             const BotResponse = `<div class="video-container"> <iframe src="${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
-                            renderResponse(BotResponse, delay);
+                            renderResponse(BotResponse, delay, last);
                         }
                     }
                 }
@@ -232,6 +232,7 @@ function setBotResponse(response, status) {
  * @param {String} message user message
  */
 function send(message) {
+    $("#userInput").prop("disabled", true);
     $.ajax({
         url: rasa_server_url,
         type: "POST",
@@ -454,7 +455,7 @@ function customizeBot(message) {
 }
 
 // Renders response with animation and delay between messages
-function renderResponse(response, delay = 0) {
+function renderResponse(response, delay = 0, last = false) {
     setTimeout(() => {
         showBotTyping();
     }, delay * 0.5);
@@ -465,6 +466,10 @@ function renderResponse(response, delay = 0) {
         hideBotTyping();
         // Update image viewer to detect new images
         viewer.update();
+
+        if (last) {
+            $("#userInput").prop("disabled", false);
+        }
 
         // Scroll to bottom
         //setTimeout(() => {scrollToBottomOfResults()},100);
