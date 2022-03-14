@@ -159,6 +159,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 370px) {
+  .menuChips {
+    height: 80px !important;
+  }
+}
+
 .screen {
   display: flex;
   flex-direction: column;
