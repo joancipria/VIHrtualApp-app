@@ -469,6 +469,7 @@ function renderResponse(response, delay = 0, last = false) {
 
         if (last) {
             $("#userInput").prop("disabled", false);
+            $(".usrInput").focus();
         }
 
         // Scroll to bottom
